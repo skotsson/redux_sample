@@ -22,7 +22,6 @@ export const fetchNews = (searchTerm) => {
         throw new Error('Could not fetch newsfeed');
       }
       const data = await response.json();
-      // console.log(data);
       return data;
     };
 

@@ -2,12 +2,11 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const inputSlice = createSlice({
   name: 'input',
-  initialState: { inputValue: '' },
+  initialState: { input: '' },
   reducers: {
     setInputValue(state, action) {
       const newSearchInputValue = action.payload;
       state.input = newSearchInputValue;
-      console.log(state.inputValue);
     },
   },
 });

@@ -4,6 +4,7 @@
 
  1. user can search the api and return the data requisted
  2. search terms are stored in redux state
+ 3. no styling
 
 ## to run app
 
