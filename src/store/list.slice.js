@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const listSlice = createSlice({
   name: 'news',
-  initialState: { news: [{ title: 'Enter search term to run populate.' }] },
+  initialState: { news: [{ title: 'Enter search term to populate.' }] },
   reducers: {
     updateNews(state, action) {
       const updatedNews = action.payload;
