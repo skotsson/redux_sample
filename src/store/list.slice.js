@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const listSlice = createSlice({
   name: 'news',
-  initialState: { news: [{ title: 'currently no search' }] },
+  initialState: { news: [{ title: 'Enter search term to run populate.' }] },
   reducers: {
     updateNews(state, action) {
       const updatedNews = action.payload;
@@ -15,14 +15,14 @@ export const fetchNews = (searchTerm) => {
   return async (dispatch) => {
     const fetchData = async () => {
       const response = await fetch(
-        `http://hn.algolia.com/api/v1/search?query=${searchTerm}&tags=story`,
+        `https://hn.algolia.com/api/v1/search?query=${searchTerm}&tags=story`,
       );
 
       if (!response.ok) {
         throw new Error('Could not fetch newsfeed');
       }
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       return data;
     };
 
