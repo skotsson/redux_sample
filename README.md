@@ -1,6 +1,6 @@
 # Sample App
 
-## description
+## brief
 
  1. user can search the api and return the data requisted
  2. search terms are stored in redux state
@@ -13,6 +13,6 @@
  3. in console, the following:
 
 ``` bash
-npm install
-npm start
+yarn install
+yarn start
 ```

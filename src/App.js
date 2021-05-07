@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import Input from '../src/components/Input/Input.component';
 import List from '../src/components/List/List.component';
 import styles from './App.module.css';
