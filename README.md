@@ -1,6 +1,6 @@
 # Sample App
 
-App fetches stories from the hn.algolia.com api based upon the search terms provided by the user. Search terms are stored in redux state. No styling as per brief. Tests are written in jest/react testing-library.
+App fetches stories from the hn.algolia.com api based upon the search terms provided by the user. Search terms are stored in redux state. No styling as per brief.
 
 ## brief
 
