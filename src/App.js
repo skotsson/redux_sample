@@ -6,7 +6,7 @@ import styles from './App.module.css';
 function App() {
   return (
     <div className={styles.header}>
-      <h1>Search Hacker News</h1>
+      <h1 title='title'>Search Hacker News</h1>
       <Input />
       <List />
     </div>

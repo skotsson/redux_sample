@@ -1,33 +1,19 @@
-import React from 'react';
 import Input from './Input.component';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { Provider } from 'react-redux';
+import userEvent from '@testing-library/user-event';
+import { render, screen } from '@testing-library/react';
 import store from '../../store/index';
+import wrapItWithRedux from '../../utils/wrapItWithRedux';
 
 describe('Input component', () => {
-  test('has a text input', () => {
-    render(
-      <Provider store={store}>
-        <Input />
-      </Provider>,
-    );
+  it('contains a text input', () => {
+    render(wrapItWithRedux(Input, store));
     const searchInput = screen.getByTitle('searchInput');
     expect(searchInput).toBeInTheDocument();
   });
 
-  test('handleChange is called by ...', () => {
-    render(
-      <Provider store={store}>
-        <Input />
-      </Provider>,
-    );
-    fireEvent.change(
-      screen.getByPlaceholderText('What would you like to search?'),
-      {
-        target: { value: 'test' },
-      },
-    );
-    const searchInput = screen.getByTitle('searchInput');
-    expect(searchInput.value).toEqual('test');
+  test('search input receives new value', () => {
+    const { getByTitle } = render(wrapItWithRedux(Input, store));
+    userEvent.type(getByTitle('searchInput'), 'test input');
+    expect(getByTitle('searchInput')).toHaveValue('test input');
   });
 });

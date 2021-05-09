@@ -5,7 +5,7 @@ const List = () => {
   const news = useSelector((state) => state.list.news);
 
   return news.map((newsItem, i) => (
-    <div className={styles.list} key={`item_${i}`}>
+    <div className={styles.list} title='newsItemDiv' key={`item_${i}`}>
       {newsItem.title}
     </div>
   ));
