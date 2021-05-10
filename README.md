@@ -1,6 +1,6 @@
 # Sample App
 
-The App fetches stories from the hn.algolia.com api based upon the search terms provided by the user. Search terms are stored in redux state. No styling as per brief.
+The App fetches stories from the hn.algolia.com api based upon the search terms provided by the user. Search terms are stored in redux state. No styling as per brief. I chose to use Redux Toolkit as on the redux website it states, "Redux Toolkit is our official recommended approach for writing Redux logic."
 
 ## brief
 

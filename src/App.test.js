@@ -10,7 +10,7 @@ describe('App', () => {
   });
 
   test('rendered App matches snapshot', () => {
-    wrapItWithRedux(App, store);
+    render(wrapItWithRedux(App, store));
     expect(screen).toMatchSnapshot();
   });
 });
