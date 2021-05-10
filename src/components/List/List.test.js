@@ -3,7 +3,7 @@ import { render } from '@testing-library/react';
 import store from '../../store/index';
 import wrapItWithRedux from '../../utils/wrapItWithRedux';
 
-describe('Input component', () => {
+describe('List component', () => {
   test('displays news item', () => {
     const { getByTitle } = render(wrapItWithRedux(List, store));
     expect(getByTitle('newsItemDiv')).toBeInTheDocument();

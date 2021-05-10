@@ -5,8 +5,8 @@ import wrapItWithRedux from './utils/wrapItWithRedux';
 
 describe('App', () => {
   test('displays a title', () => {
-    const { getByTitle } = render(wrapItWithRedux(App, store));
-    expect(getByTitle('title').innerHTML).toContain('Search Hacker News');
+    render(wrapItWithRedux(App, store));
+    expect(screen.getByText(/Search Hacker News/)).toBeVisible();
   });
 
   test('rendered App matches snapshot', () => {

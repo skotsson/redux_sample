@@ -5,7 +5,7 @@ import store from '../../store/index';
 import wrapItWithRedux from '../../utils/wrapItWithRedux';
 
 describe('Input component', () => {
-  it('contains a text input', () => {
+  test('contains a text input', () => {
     render(wrapItWithRedux(Input, store));
     const searchInput = screen.getByTitle('searchInput');
     expect(searchInput).toBeInTheDocument();
